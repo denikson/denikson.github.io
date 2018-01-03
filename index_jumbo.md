@@ -1,4 +1,4 @@
-<h1 class="display-4">Greetings, adventurer!</h1>
+<h1 class="display-4 text-center text-md-left">Greetings, adventurer!</h1>
 <hr class="my-4">
 
 An avid argonaut, a magnificent colt of a programming kind!
