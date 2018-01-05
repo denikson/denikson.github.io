@@ -10,5 +10,6 @@ github_username:  denikson
 
 # Build settings
 markdown: kramdown
+remote_theme: denikson/coder-horse-jekyll
 plugins:
   - jekyll-feed
