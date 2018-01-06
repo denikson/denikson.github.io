@@ -9,6 +9,7 @@
       description: "A fast, open-source translation loader for CM3D2"
       href: "/CM3D2.YATranslator"
     - title: "IMGUI Translation Loader"
+      subtitle: "Translates Unity plug-ins!"
       description: "A translation loader for Unity's IMGUI"
       href: "/IMGUITranslationLoader"
     - title: "TexTool"
