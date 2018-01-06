@@ -10,7 +10,7 @@
       href: "/CM3D2.YATranslator"
     - title: "IMGUI Translation Loader"
       description: "A translation loader for Unity's IMGUI"
-      href: "https://github.com/denikson/IMGUITranslationLoader"
+      href: "/IMGUITranslationLoader"
     - title: "TexTool"
       description: "A TEX<->PNG converter for C(O)M3D2"
       href: "https://github.com/denikson/TexTool"
