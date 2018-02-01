@@ -13,7 +13,7 @@
       description: "A translation loader for Unity's IMGUI"
       href: "/IMGUITranslationLoader"
     - title: "TexTool"
-      description: "A TEX<->PNG converter for C(O)M3D2"
+      description: "A TEX&lt;-&gt;PNG converter for C(O)M3D2"
       href: "https://github.com/denikson/TexTool"
 - name: "Libraries"
   projects:
