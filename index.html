@@ -1,83 +1,49 @@
----
+--- 
 title: "Index" 
 layout: main 
+styles: 
+  - "/assets/styles/index.css"
 ---
-
-<style>
-  .horse-avatar img {
-    border-radius: 50%;
-    width: auto;
-    height: 300px;
-  }
-
-  .projects .card {
-      margin-bottom: 2%;
-      margin-right: 1%;
-      margin-left: 1%;
-      width: 100%;
-      transition-property: box-shadow;
-      transition-duration: 100ms;
-      transition-timing-function: ease-in;
-      color: inherit;
-      text-decoration: inherit;
-  }
-
-  .projects .card:hover {
-    box-shadow: 1px 2px 5px -1px rgba(0, 0, 0, 0.77);
-  }
-
-  @media (min-width: 768px) {
-    .projects .card {
-      width: 48%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .projects .card {
-      width: 31%;
-    }
-  }
-</style>
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
       <div class="col-auto mx-auto">
         <div class="horse-avatar">
-          <img src="assets/img/horse_1.jpg">
+          <img src="assets/img/horse_1.jpg" alt="Horse face">
         </div>
       </div>
       <div class="col jumbo-text">
-        {% capture jumbo_text %}{% include_relative index_jumbo.md %}{% endcapture %} {{ jumbo_text | markdownify }}
+        {% capture jumbo_text %}{% include_relative index_jumbo.md %}{% endcapture %} 
+        {{ jumbo_text | markdownify }}
       </div>
     </div>
   </div>
 </div>
 
-</div>
 <div class="container">
   <h1 class="display-4 mb-3">Projects</h1>
-  <hr>
+  <hr> 
   {% for section in site.data.projects %}
   <h2 class="display-5 mb-2">{{ section.name }}</h2>
   <div class="d-flex flex-wrap justify-content-start projects">
-      {% for project in section.projects %}
-      <a href="{{ project.href }}" class="card">
-        {% if project.image_href %}
-          <img class="card-img-top" src="{{ project.image_href }}" alt="Card image cap">
+    {% for project in section.projects %}
+    <a href="{{ project.href }}" class="card">
+      {% if project.image_href %}
+      <img class="card-img-top" src="{{ project.image_href }}" alt="Card image cap"> 
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        {% if project.subtitle %}
+        <h6 class="card-subtitle mb-2 text-muted">{{ project.subtitle }}</h6>
+        {% endif %} 
+        {% if project.description %}
+        <p class="card-text">{{ project.description }}</p>
         {% endif %}
-        <div class="card-body">
-          <h5 class="card-title">{{ project.title }}</h5>
-          {% if project.subtitle %}
-            <h6 class="card-subtitle mb-2 text-muted">{{ project.subtitle }}</h6>
-          {% endif %}
-          {% if project.description %}
-            <p class="card-text">{{ project.description }}</p>
-          {% endif %}
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-    <hr>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <hr> 
   {% endfor %}
 </div>
